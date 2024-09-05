@@ -1,9 +1,14 @@
-
-import './App.css'
+import HeaderLash from "../src/components/HeaderLash/HeaderLash";
+import BannersHeader from "../src/components/BannersHeader/BannersHeader.jsx";
 
 function App() {
 
-  return 
+  return (
+    <>
+    <HeaderLash />
+    <BannersHeader />
+    </>
+  )
 
   
 }
