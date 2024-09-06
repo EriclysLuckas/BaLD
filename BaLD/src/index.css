@@ -1,12 +1,13 @@
+
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+  font-family: "Quicksand", sans-serif;
 }
 
 #root {
-  display: ;
   background-color: #151d35;
   width: 100%;
   height: 100vh;
