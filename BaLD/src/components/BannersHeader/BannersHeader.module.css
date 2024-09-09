@@ -8,27 +8,38 @@
 
 .titleBanner{
   position: absolute;
-  top: 15%;
+  top: 18%;
   z-index: 5;
   width: 68%;
   margin-left: 4%;
   h1{
     color: #5dd5c7;
-    font-size: 4ch;
+    font-size:4ch;
     padding-bottom: 6px;
-    font-weight: 800;
   }
  & p:nth-child(2){
-  width: 70%;
+  width: 65%;
     border-bottom:dotted .4ch #fff; 
 
  }
   p{
-    margin-top: 1px;
+    margin-top: 5px;
     font-size: 2.5ch;
     font-weight: 500;
+
   }
 
+}
+
+.titleBanner button{
+background:#5dd5c7 ;
+color: white;
+border: none;
+width: 15ch;
+font-size: 1.8ch;
+height: 3.5ch;
+position: absolute;
+bottom: -40%;
 }
 
 .BannerScreen figure{
@@ -43,10 +54,10 @@ justify-content: end;
   display: block;
   top: 42%;
   right: 15%;
-  filter: blur(1.5px);
+  filter: blur(1.5px) brightness(60%);
   background-image: url(../../../img/ciliosBanner.jpg);
   z-index: -1;
-  width: 85%;
+  width: 95%;
   height: 100%;
   background-size: cover; 
   position: absolute;
@@ -54,7 +65,7 @@ justify-content: end;
 }
 }
 .BannerScreen figure img {
-  width: 85%;
+  width: 95%;
   height: 100%;
   object-fit: cover;
   filter: blur(.1px);
@@ -64,5 +75,5 @@ justify-content: end;
   height: 30%;
   position: absolute;
   top: 10%;
-  right:6%;
+  right:5%;
 }
