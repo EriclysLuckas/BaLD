@@ -12,16 +12,41 @@
 
 
 
+
     h1{
       color: #5dd5c7;
       font-size:7ch;
       padding-bottom: 6px;
    }
   }
+  .SectionTypeLashs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   }
+  
  .TypeLash{
   width: 100%;
- 
+  display: flex;
+  justify-content: center;
+  align-items: center;
  }
 
+ .figureswiper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50ch;
+  img{
+
+    width: 50%;
+    height: 100%;
+    object-fit: contain;
+  }
+ }
+ 
   
  
