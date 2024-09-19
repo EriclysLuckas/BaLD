@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 
 // Import Swiper styles
-import 'swiper/css/autoplay'; 
 
 
 export default function TypeLashs() {
