@@ -11,15 +11,16 @@ export default function TypeLashs() {
       <h1>Tipos de Designs</h1>
 
       <div className={styleTypeLashs.TypeLash}>
-      <Swiper  
+      <Swiper  className = {styleTypeLashs.swiper}
+      
         loop={true} // Ativa o loop infinito
         modules={[  ]}
         slidesPerView={1}
         >
 
-          <SwiperSlide >
-            <p>Teste 1</p>
-            <figure className = {styleTypeLashs.figureswiper}> <img src="../img/ciliosBanner.jpg" alt="teste" /></figure>
+          <SwiperSlide className = {styleTypeLashs.slideContent}>
+            <p className = {styleTypeLashs.titleSlide}>Teste 1</p>
+            <figure className = {styleTypeLashs.figureSlider}> <img src="../img/ciliosBanner.jpg" alt="teste" /></figure>
           </SwiperSlide>
           <SwiperSlide >
             <p>Teste 2</p>
