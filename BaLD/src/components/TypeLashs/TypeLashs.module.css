@@ -42,12 +42,17 @@
   height: 50ch;
   img{
 
-    width: 50%;
-    height: 100%;
-    object-fit: contain;
+    width: 25ch;
+    height: 40ch;
+    object-fit: cover;
+    object-position: 20%;
   }
  }
+ .swiper{
+  width: 50%;
+ }
  .slideContent{
+width: 50%;
 }
  .titleSlide{
 width: 50%;
