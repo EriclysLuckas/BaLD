@@ -1,35 +1,45 @@
 import styleTypeLashs from "../TypeLashs/TypeLashs.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
-
-// Import Swiper styles
+import TypesLashsJson from "../TypeLashs/TypeLashs.json";
 
 
 export default function TypeLashs() {
+
+  
   return (
     <section className={styleTypeLashs.SectionTypeLashs}>
       <h1>Tipos de Designs</h1>
 
       <div className={styleTypeLashs.TypeLash}>
+
+
+    
       <Swiper  className = {styleTypeLashs.swiper}
-      
-        loop={true} // Ativa o loop infinito
+       loop={true} // Ativa o loop infinito
         modules={[  ]}
         slidesPerView={1}
+        spaceBetween={50}
+
         >
 
-          <SwiperSlide className = {styleTypeLashs.slideContent}>
-            <p className = {styleTypeLashs.titleSlide}>Teste 1</p>
-            <figure className = {styleTypeLashs.figureSlider}> <img src="../img/ciliosBanner.jpg" alt="teste" /></figure>
-          </SwiperSlide>
-          <SwiperSlide className = {styleTypeLashs.slideContent}>
-            <p className = {styleTypeLashs.titleSlide} >Teste 2</p>
-            <figure className = {styleTypeLashs.figureSlider}> <img src="../img/Typelash.png" alt="teste" /></figure>
-          </SwiperSlide>
-        </Swiper>
+          {TypesLashsJson.map((item) =>(
+            <SwiperSlide key={item.id}>
+              <p className = {styleTypeLashs.titleSlide}>{item.name} <img src={item.min} alt="" /></p>
+              <figure className = {styleTypeLashs.figureSlider}>           
+              <img src={item.img} alt ="slide" />
+              <img src={item.img} alt ="slide" className = {styleTypeLashs.imgBackground} />
+
+              </figure>
+            </SwiperSlide>
+          ))}
+        </Swiper> 
+        
+        
 
       </div>
 
+      
 
     </section>
 
