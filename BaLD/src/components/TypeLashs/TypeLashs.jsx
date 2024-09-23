@@ -1,6 +1,7 @@
 import styleTypeLashs from "../TypeLashs/TypeLashs.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
+// import { Autoplay } from "swiper";
 import TypesLashsJson from "../TypeLashs/TypeLashs.json";
 
 
@@ -16,8 +17,13 @@ export default function TypeLashs() {
 
     
       <Swiper  className = {styleTypeLashs.swiper}
-       loop={true} // Ativa o loop infinito
-        modules={[  ]}
+
+        loop={true} 
+        // modules={[ Autoplay ]}
+        // autoplay={{
+        //   delay: 2500, 
+        //   disableOnInteraction: false, 
+        // }}
         slidesPerView={1}
         spaceBetween={50}
 
