@@ -5,35 +5,42 @@ import { useState } from 'react'; // Certifique-se de importar useState
 export default function GalleryLashs() {
 
 
-  const [typeSelected,setTypeSelected ] = useState("Volume Brasileiro")
+  const [typeSelected,setTypeSelected ] = useState("Brasileiro")
   const handleTypeClick = (type) =>{
     setTypeSelected(type)
   }
 
   const imgFilter = typeSelected ? GalleryLashsJson.filter((item) => item.name === typeSelected) : []
+  const uniqueTypes = Array.from(new Set(GalleryLashsJson.map(item => item.name)));
+
 
   return(
     <section className ={styleGallery.sectionGallery}>
-
+      <div className ={styleGallery.titleGallery}>
+        <h1>Alguns Resultados </h1>
+      </div>
       <div className ={styleGallery.screenGallery}>
         <div className = {styleGallery.typesGallery}>
-        {GalleryLashsJson.map ((item)=>(
-          
-          <span
-          key = {item.name}
-          onClick = {()=> handleTypeClick(item.name)}
-          className={item.name === typeSelected ? styleGallery.selectedType : ''}
-          >{item.name} 
-          <img src={item.min} alt="" />
+        {uniqueTypes.map(type => {
+            const item = GalleryLashsJson.find(item => item.name === type); // Pega o primeiro item correspondente ao tipo
 
-           
-          </span>
-        ))}
+            return (
+              <span
+                key={type}
+                onClick={() => handleTypeClick(type)}
+                className={type === typeSelected ? styleGallery.selectedType : ''}
+              >
+                <p className={styleGallery.typesSlashsP}>{type}</p>
+                {item && <img src={item.min} alt={type} />}
+              </span>
+            );
+          })}
         
 
         </div>
 
         <div className = {styleGallery.contentGallery}>
+          
           {imgFilter.length > 0 && (
             imgFilter.map((galleryItem) => (
               <img
