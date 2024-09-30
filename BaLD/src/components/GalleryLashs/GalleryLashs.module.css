@@ -1,6 +1,7 @@
 .sectionGallery{
   width: 100%;
 }
+
 .screenGallery{
 display: flex;
 flex-direction: column;

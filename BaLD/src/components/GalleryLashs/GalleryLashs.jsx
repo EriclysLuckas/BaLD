@@ -2,7 +2,10 @@ import styleGallery from "../GalleryLashs/GalleryLashs.module.css";
 import GalleryLashsJson from "../GalleryLashs/GalleryLashs.json";
 import { useState } from 'react'; // Certifique-se de importar useState
 
+
+
 export default function GalleryLashs() {
+
 
 
   const [typeSelected,setTypeSelected ] = useState("Brasileiro")
@@ -17,7 +20,7 @@ export default function GalleryLashs() {
   return(
     <section className ={styleGallery.sectionGallery}>
       <div className ={styleGallery.titleGallery}>
-        <h1>Alguns Resultados </h1>
+        <h1>Resultados </h1>
       </div>
       <div className ={styleGallery.screenGallery}>
         <div className = {styleGallery.typesGallery}>

@@ -1,5 +1,5 @@
 import styleBannersHeader from "../BannersHeader/BannersHeader.module.css";
-
+import BtnToSchedule from "../BtnToSchedule/BtnToSchedule.jsx"
 
 
 export default function BannersHeader() {
@@ -12,7 +12,7 @@ export default function BannersHeader() {
         <p></p>
         <p>Lash desgin em João pessoa <br/>
         Qualidade teste, estea asjkfas asfasdas asdasdas.</p>
-        <button>Agendar</button>
+        <BtnToSchedule />
       </div>
 
       <div className = {styleBannersHeader.BannerScreen}>

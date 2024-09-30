@@ -51,7 +51,6 @@ export default function TypeLashs() {
       </div>
 
 
-
     </section>
 
 
