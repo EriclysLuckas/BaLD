@@ -41,20 +41,6 @@
     "img" : "../img/volumeEgipcios.jpg",
     "min" : "../img/miniaturas/egito.png"
 
-  }, 
-   {
-    "id": 7,
-    "name": "Egípcio",
-    "img" : "../img/volumeEgipcios.jpg",
-    "min" : "../img/miniaturas/egito.png"
-
-  },
-   {
-    "id": 8,
-    "name": "Egípcio",
-    "img" : "../img/volumeEgipcios.jpg",
-    "min" : "../img/miniaturas/egito.png"
-
   }
 
 ]

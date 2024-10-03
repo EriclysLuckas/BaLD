@@ -96,7 +96,7 @@ overflow: hidden;
     &:before{
       content: '';
       /* background: rgb(101, 216, 206); */
-      background: white;
+      background: #fff;
       
       width: 0;
       height: 101%;
@@ -303,7 +303,7 @@ bottom: -25%;
   width: 50ch;
   position: absolute;
   top: 10%;
-  right:10%;
+  right:5%;
 }}
 @media (width > 850px) {
   .titleBanner{
