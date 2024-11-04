@@ -1,4 +1,5 @@
 import styleFooter from "../FooterComponent/FooterComponent.module.css";
+import FormSite from '../FormSite/FormSite';
 import IconFooter from '../IconsFooter/IconsFooter';
 
 export default function FooterComponent() {
@@ -12,16 +13,13 @@ export default function FooterComponent() {
           <IconFooter />
 
           <div className={styleFooter.icons}>
-            <span>Contato:(83) 9 9999-9999</span>
-            <span>E-mail: teste@teste.com.br</span>
-            <span>teste</span>
+            <span><strong>Contato:</strong> (83) 9 9999-9999</span>
+            <span><strong>E-mail:</strong> teste@teste.com.br</span>
           </div>
 
         </div>
+        <FormSite />
 
-        <form action="POST">
-          <input type="text" />
-        </form>
         <div className={styleFooter.imgProfissional}> <img src="../img/profissional.png" alt="" />
         </div>
       </div >

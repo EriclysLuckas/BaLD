@@ -1,11 +1,12 @@
 .sectionFooter{
-  width: 100%;
+  width: 90%;
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-top: 5%;
   position: relative;
-z-index: 2;
+  padding: 2%;
+  z-index: 2;
   &:after{
     content: "";
     position: absolute;
@@ -18,7 +19,10 @@ z-index: 2;
   display: flex;
   flex-direction: column;
   margin-top: 15%;
-
+  span{
+    width: 100%;
+    font-size: 2.5ch;
+  }
 }
 .logoFooter{
   width: 25%;
@@ -29,31 +33,25 @@ img{
 .contentFooter{
   display: flex;
   width: 100%;
-  justify-content: center;
-  gap: 20%;
+  justify-content: space-around;
   margin-top: 2%;
 }
 .imgProfissional{
-  width: 15%;
+  width: 20%;
+  height: 100%;
   img{
     width: 100%;
     object-fit: cover;
 
   }
 }
+.linksIcons{
+  width: 20%;
 
+}
 .linksFooter{
   display: flex;
-  gap: 15%;
-  height: 4ch;
-  ul{
-    list-style: none;
-    li{
-      font-size:3ch ;
-      
-        
-      }
-    }
+  gap: 5%;
   }
 
 
@@ -165,7 +163,9 @@ img{
         top: 50%;
         transform: translate(-50%,-50%);
         transition: .4s ease;
-}
+        width: 4.2ch;
+
+      }
 &:hover{   
 
     &:before{
@@ -203,6 +203,7 @@ img{
         top: 50%;
         transform: translate(-50%,-50%);
         transition: .4s ease;
+       width: 4.2ch;
 }
 &:hover{   
 
