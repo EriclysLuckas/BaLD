@@ -1,8 +1,13 @@
 import styleHeader from "../HeaderLash/HeaderLash.module.css";
 import { IoMenu } from "react-icons/io5";
-
+import { useState } from "react";
 export default function HeaderLash() {
+const [isOpen,setIsOpen] = useState(false)
 
+
+const handleOpenMenu () => {
+  setIsOpen = (true)
+}
 
   return (
       <section className={styleHeader.HeaderLash} >
