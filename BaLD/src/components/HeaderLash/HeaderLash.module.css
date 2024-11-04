@@ -23,6 +23,7 @@
 .hambMenu svg {
 width:50%;
 height: 50%;
+z-index: 7;
 }
 .logoLash{
   width: 90%;
@@ -40,6 +41,17 @@ height: 50%;
   height: 100%;
 }
 
+.menuMobile{
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  background-color: red;
+  z-index: 6;
+  top: 0;
+}
+.contentMenu{
+  padding: 25% 5% ;
+}
 @media (width > 1366) {
 
   .logoLash figure img{
