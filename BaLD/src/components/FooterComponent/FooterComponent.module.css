@@ -222,3 +222,33 @@ img{
     padding: .4ch;     
    }
 }
+
+@media (width<800px) {
+  .sectionFooter{
+    margin-top: 20%;
+    padding: 0;
+  }
+  .contentFooter{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .linksIcons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .linksFooter{
+    justify-content: center;
+    gap: 15%;
+    }
+    .logoFooter{
+      width: 80%;
+      margin-top: 5%;
+    }
+    .imgProfissional{
+      width: 60%;
+    }
+}
