@@ -10,7 +10,7 @@ export default function InfoRange() {
           <div className={syleInfoRange.contentAsideHeader}>
             <span className={syleInfoRange.spanAsideHeaderContact}><strong>Contato:</strong> (83) 99999-9999 </span>
             <div className={syleInfoRange.buttonAsideHeader}>
-              <span className={syleInfoRange.spanAsideHeader}>Se encante! </span>
+              <span className={syleInfoRange.spanAsideHeader}> <a href="https://www.instagram.com/" target="_blank">Se encante!</a> </span>
               
               <span className={syleInfoRange.iconAsideHeader}>
                     <figure className={syleInfoRange.figureIconAside}>

@@ -6,6 +6,7 @@ import TypeLashs from "../src/components/TypeLashs/TypeLashs"
 import GalleryLashs from './components/GalleryLashs/GalleryLashs';
 import CompareBackAfter from './components/CompareBackAfter/CompareBackAfter';
 import CareTips from './components/CareTips/CareTips';
+import FooterComponent from "./components/FooterComponent/FooterComponent.jsx";
 function App() {
 
   return (
@@ -17,7 +18,7 @@ function App() {
     <CompareBackAfter />
     <GalleryLashs />
     <CareTips />
-
+    < FooterComponent/>
 
     </div>
   )
