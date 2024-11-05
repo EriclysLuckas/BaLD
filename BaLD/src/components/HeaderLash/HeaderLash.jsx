@@ -1,11 +1,10 @@
 import styleHeader from "../HeaderLash/HeaderLash.module.css";
 import { IoMenu, IoCloseSharp } from "react-icons/io5";
-import { useState,useEffect  } from "react";
+import { useState, useEffect } from "react";
 
 export default function HeaderLash() {
-  const [isOpen, setIsOpen] = useState(false); // Definir o estado corretamente
+  const [isOpen, setIsOpen] = useState(false); 
   const [isMobile, setIsMobile] = useState(false);
-
 
   const checkMobile = () => {
     if (window.innerWidth <= 500) {
@@ -14,26 +13,32 @@ export default function HeaderLash() {
       setIsMobile(false);
     }
   };
+
   useEffect(() => {
     checkMobile(); // Verifica logo no início
     window.addEventListener("resize", checkMobile); // Escuta o evento de redimensionamento
 
-    // Limpeza do evento ao desmontar o componente
     return () => {
       window.removeEventListener("resize", checkMobile);
     };
   }, []);
 
-
-
-
-
-
-
   const handleOpenMenu = () => {
-    setIsOpen(prevState => !prevState);
-    console.log("teste");
+    setIsOpen((prevState) => !prevState);
+    console.log("Menu alterado");
   };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "auto";
+    }
+
+    return () => {
+      document.body.style.overflowY = "auto";
+    };
+  }, [isOpen]); 
 
   const menuItems = [
     { id: "home", label: "Home" },
@@ -61,30 +66,25 @@ export default function HeaderLash() {
         </div>
       </div>
 
-
-
-            {isMobile && (
-              <div
-              className={
-                isOpen
-                  ? styleHeader.menuMobile
-                  : styleHeader.menuMobileClose
-              }
-            >
-              <div className={styleHeader.contentMenu}>
-                <ul>
-                  {menuItems.map(item => (
-                    <li key={item.id}>
-                      <a href={`#${item.id}`} onClick={handleOpenMenu}>
-                        {item.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            )}
-      
+      {isMobile && (
+        <div
+          className={
+            isOpen ? styleHeader.menuMobile : styleHeader.menuMobileClose
+          }
+        >
+          <div className={styleHeader.contentMenu}>
+            <ul>
+              {menuItems.map((item) => (
+                <li key={item.id}>
+                  <a href={`#${item.id}`} onClick={handleOpenMenu}>
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
