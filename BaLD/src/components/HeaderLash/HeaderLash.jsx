@@ -4,13 +4,21 @@ import { useState } from "react";
 
 
 export default function HeaderLash() {
-const [isOpen,setIsOpen] = useState(false)
+const [isOpen,setIsOpen] = useState()
 
 
 const handleOpenMenu = () => {
   setIsOpen(prevState=> !prevState)
   console.log('teste')
 }
+const menuItems = [
+  { id: 'home', label: 'Home' },
+  { id: 'tipos', label: 'Tipos de Designs' },
+  { id: 'descubra', label: 'Descubra seu Estilo' },
+  { id: 'resultados', label: 'Resultados' },
+  { id: 'cuidados', label: 'Dicas de Cuidados' },
+  { id: 'contatos', label: 'Contatos' },
+];
 
   return (
       <section className={styleHeader.HeaderLash} id ="home">
@@ -19,15 +27,16 @@ const handleOpenMenu = () => {
           <div className={styleHeader.logoLash}> <figure> <img src="../img/logo.png" alt="" /></figure> </div>
         </div>
           {(isOpen)&&(
-            <div className = {styleHeader.menuMobile}>
-              <div className = {styleHeader.contentMenu}>
+            <div className={isOpen ? styleHeader.menuMobile : styleHeader.menuMobileClose}>
+            <div className = {styleHeader.contentMenu}>
               <ul>
-                <li><a href ="#home">Home</a>  </li>
-                <li><a href ="#tipos">Tipos de Desgins</a></li>
-                <li><a href ="#descubra">Descubra seu Estilo</a></li>
-                <li><a href ="#resultados">Resultados</a></li>
-                <li><a href ="#cuidados">Dicas de Cuidados</a></li>
-                <li><a href ="#contatos">Contatos</a></li>
+            
+
+                {menuItems.map((item) =>(
+                  <li key ={item.id}>
+                    <a href ={`#${item.id}`} onClick={handleOpenMenu}>{item.label}</a>
+                  </li>
+                ))}
 
               </ul>
 
