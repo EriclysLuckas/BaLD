@@ -1,9 +1,34 @@
 import styleHeader from "../HeaderLash/HeaderLash.module.css";
 import { IoMenu, IoCloseSharp } from "react-icons/io5";
-import { useState } from "react";
+import { useState,useEffect  } from "react";
 
 export default function HeaderLash() {
   const [isOpen, setIsOpen] = useState(false); // Definir o estado corretamente
+  const [isMobile, setIsMobile] = useState(false);
+
+
+  const checkMobile = () => {
+    if (window.innerWidth <= 500) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+  useEffect(() => {
+    checkMobile(); // Verifica logo no início
+    window.addEventListener("resize", checkMobile); // Escuta o evento de redimensionamento
+
+    // Limpeza do evento ao desmontar o componente
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+    };
+  }, []);
+
+
+
+
+
+
 
   const handleOpenMenu = () => {
     setIsOpen(prevState => !prevState);
@@ -36,25 +61,30 @@ export default function HeaderLash() {
         </div>
       </div>
 
-      <div
-        className={
-          isOpen
-            ? styleHeader.menuMobile
-            : styleHeader.menuMobileClose
-        }
-      >
-        <div className={styleHeader.contentMenu}>
-          <ul>
-            {menuItems.map(item => (
-              <li key={item.id}>
-                <a href={`#${item.id}`} onClick={handleOpenMenu}>
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+
+
+            {isMobile && (
+              <div
+              className={
+                isOpen
+                  ? styleHeader.menuMobile
+                  : styleHeader.menuMobileClose
+              }
+            >
+              <div className={styleHeader.contentMenu}>
+                <ul>
+                  {menuItems.map(item => (
+                    <li key={item.id}>
+                      <a href={`#${item.id}`} onClick={handleOpenMenu}>
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            )}
+      
     </section>
   );
 }

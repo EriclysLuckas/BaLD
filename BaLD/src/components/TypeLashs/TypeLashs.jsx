@@ -24,7 +24,7 @@ export default function TypeLashs() {
         <Swiper className={styleTypeLashs.swiper}
           modules={[EffectFade, Autoplay]}
           autoplay={{
-            delay: 3000,
+            delay: 1500,
             disableOnInteraction: false,
           }}
           effect="fade"
