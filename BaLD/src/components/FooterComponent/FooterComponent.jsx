@@ -4,7 +4,7 @@ import IconFooter from '../IconsFooter/IconsFooter';
 
 export default function FooterComponent() {
   return (
-    <section className={styleFooter.sectionFooter}>
+    <section className={styleFooter.sectionFooter} id = "contatos">
       <div className={styleFooter.logoFooter}>
         <img src="../img/logo.png" alt="" />
       </div>

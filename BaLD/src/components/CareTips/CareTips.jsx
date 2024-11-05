@@ -15,7 +15,7 @@ const listCareArray = [
 ]
 return (
 
-  <section className = {styleCareTips.sectionCareTips}>
+  <section className = {styleCareTips.sectionCareTips} id = "cuidados">
 
     <div className = {styleCareTips.contentCareTips}>
       <h1>Dicas de Cuidados</h1>

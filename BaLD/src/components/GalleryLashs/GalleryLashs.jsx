@@ -18,7 +18,7 @@ export default function GalleryLashs() {
 
 
   return(
-    <section className ={styleGallery.sectionGallery}>
+    <section className ={styleGallery.sectionGallery} id ="resultados">
       <div className ={styleGallery.titleGallery}>
         <h1>Resultados </h1>
       </div>

@@ -7,7 +7,7 @@ export default function CompareBackAfter() {
 
 
   return (
-    <section className={styleCompareBackAfter.CompareBackAfterSection}>
+    <section className={styleCompareBackAfter.CompareBackAfterSection} id ="descubra">
 
 
       {compareJson.map((item)=>(

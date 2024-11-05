@@ -14,7 +14,7 @@ export default function TypeLashs() {
 
 
   return (
-    <section className={styleTypeLashs.SectionTypeLashs}>
+    <section className={styleTypeLashs.SectionTypeLashs} id = "tipos" >
       <h1>Tipos de Designs</h1>
 
       <div className={styleTypeLashs.TypeLash}>
