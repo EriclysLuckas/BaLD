@@ -12,7 +12,6 @@ function App() {
   return (
     <div  className = {styleApp.divApp}>
     <HeaderLash />
-    <InfoRange />
     <BannersHeader />
     <TypeLashs />
     <CompareBackAfter />
