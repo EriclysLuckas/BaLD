@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
+
+
+@keyframes openMenu {
+0%{
+    left: -250px;
+  }
+  100%{
+    left: 0;
+  }
+}
+
 *{
   font-family: "Quicksand", sans-serif;
 
@@ -22,6 +33,7 @@
   justify-content: center;
   margin-top: 3%;
   position: absolute;
+  cursor: pointer;
 }
 .hambMenu svg {
 width:50%;
@@ -48,11 +60,23 @@ z-index: 7;
   position: absolute;
   width: 80%;
   height: 100%;
-  background-color: #151d35ee;
+  background-color: #151d35;
   z-index: 6;
   top: 0;
-  padding: 25% 5% ;
-
+  left: 0; 
+  padding: 25% 5%;
+  transition: left 0.5s ease; 
+}
+.menuMobileClose {
+  position: absolute;
+  width: 80%;
+  background-color: #151d35;
+  height: 100%;
+  z-index: 6;
+  top: 0;
+  left: -350px;
+  padding: 25% 5%;
+  transition: left 0.5s ease; 
 }
 .contentMenu{
   color: #fff;
