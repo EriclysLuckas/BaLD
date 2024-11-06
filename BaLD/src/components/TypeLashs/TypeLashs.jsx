@@ -5,10 +5,10 @@ import 'swiper/css/bundle';
 import TypesLashsJson from "../TypeLashs/TypeLashs.json";
 
 //modules swiper
-import { EffectFade, Autoplay } from 'swiper/modules';
+import { EffectFade, Autoplay,Pagination  } from 'swiper/modules';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/autoplay';
-
+import 'swiper/css/pagination';
 
 export default function TypeLashs() {
 
@@ -22,7 +22,7 @@ export default function TypeLashs() {
 
 
         <Swiper className={styleTypeLashs.swiper}
-          modules={[EffectFade, Autoplay]}
+          modules={[EffectFade, Autoplay, Pagination]}
           autoplay={{
             delay: 1500,
             disableOnInteraction: false,
@@ -31,7 +31,10 @@ export default function TypeLashs() {
           loop={true}
           slidesPerView={1}
           spaceBetween={50}
-
+          pagination={{
+            clickable: true, 
+          }}
+        
         >
 
           {TypesLashsJson.map((item) => (
@@ -47,7 +50,7 @@ export default function TypeLashs() {
         </Swiper>
 
 
-
+     
       </div>
 
 
