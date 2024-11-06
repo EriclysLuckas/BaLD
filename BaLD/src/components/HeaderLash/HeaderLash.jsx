@@ -8,6 +8,7 @@ export default function HeaderLash() {
 
   const checkMobile = () => {
     if (window.innerWidth <= 500) {
+      
       setIsMobile(true);
     } else {
       setIsMobile(false);
@@ -28,17 +29,7 @@ export default function HeaderLash() {
     console.log("Menu alterado");
   };
 
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflowY = "hidden";
-    } else {
-      document.body.style.overflowY = "auto";
-    }
-
-    return () => {
-      document.body.style.overflowY = "auto";
-    };
-  }, [isOpen]); 
+ 
 
   const menuItems = [
     { id: "home", label: "Home" },
