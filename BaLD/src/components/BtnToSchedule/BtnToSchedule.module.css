@@ -36,4 +36,30 @@ overflow: hidden;
     }
  
 }
-
+.closeModalAgendamento{
+  cursor: pointer;
+}
+.ModalAgendamento{
+  position:fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.637); 
+  left: 0;
+  display: flex;
+}
+.contentModalAgendamento{
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .closeModalAgendamento{
+    position: absolute;
+    right: 2ch;
+    top: 3%;
+  }
+}
